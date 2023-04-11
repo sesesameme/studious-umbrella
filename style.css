@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: beige;
+  color: seagreen;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  /* DISPLAY SETTINGS */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3em;
+  margin: 2em;
+  border: 10px dotted lightyellow;
+  border-radius: 50%;
+}
+
+p {
+  /* FONT SETTINGS */
+  font-family: "Recursive", sans-serif;
+  letter-spacing: -0.03em;
+  font-variation-settings: "wght" 300, "CASL" 0, "slnt" 0, "MONO" 1;
+  font-size: 6em;
+
+  /* ANIMATION */
+  animation-name: change-font;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+
+.box p:nth-child(odd) {
+  animation-delay: 1s;
+}
+
+@keyframes change-font {
+  0% {
+    font-variation-settings: "wght" 300, "CASL" 0, "slnt" 0, "MONO" 1;
+    font-size: 3em;
+    color: black;
+  }
+
+  40% {
+    font-variation-settings: "wght" 900, "CASL" 1, "slnt" -14, "MONO" 1;
+    font-size: 8em;
+    color: seagreen;
+  }
+
+  100% {
+    font-variation-settings: "wght" 300, "CASL" 0, "slnt" 0, "MONO" 1;
+    font-size: 3em;
+    color: black;
+  }
+}
